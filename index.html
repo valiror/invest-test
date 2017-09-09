@@ -73,19 +73,19 @@
                       <label><input type="checkbox" value="" checked>&nbsp;&nbsp;&nbsp;You</label>
                       </div><br>
                       <div class="checkbox">
-                      <label><input type="checkbox" value="" >&nbsp;&nbsp;&nbsp;Spouse</label>
+                      <label><input type="checkbox" value="" class="sp1">&nbsp;&nbsp;&nbsp;Spouse</label>
                       </div><br>
                       <div class="checkbox">
-                      <label><input type="checkbox" value="" >&nbsp;&nbsp;&nbsp;Brother</label>
+                      <label><input type="checkbox" value="" class="br01">&nbsp;&nbsp;&nbsp;Brother</label>
                       </div><br>
                       <div class="checkbox">
-                      <label><input type="checkbox" value="" >&nbsp;&nbsp;&nbsp;Sister</label>
+                      <label><input type="checkbox" value="" class="sis1">&nbsp;&nbsp;&nbsp;Sister</label>
                       </div><br>
                       <div class="checkbox">
-                      <label><input type="checkbox" value="" >&nbsp;&nbsp;&nbsp;Father</label>
+                      <label><input type="checkbox" value="" class="fa1">&nbsp;&nbsp;&nbsp;Father</label>
                       </div><br>
                       <div class="checkbox">
-                      <label><input type="checkbox" value="" >&nbsp;&nbsp;&nbsp;Daughter</label>
+                      <label><input type="checkbox" value="" class="da1">&nbsp;&nbsp;&nbsp;Daughter</label>
                       </div>
 
                   </div>          
@@ -106,20 +106,87 @@
                             <h4 class="modal-title text-center">PLEASE ENTER THE AGE OF SELECTED MEMBERS</h4>
                         
                         <div class="modal-body">
-                            <div class="col-md-6"><label>You</label> </div>
+                        <div class="row">
+                            <div class="col-md-6"><p class="txt-you">You</p> </div>
                              <div class="col-md-6">
                             <select class="form-control " placeholder="YOUR GENDER">
-                             <option value="">Age</option>
+                             
                              <option value="1">20</option>
                              <option value="2">25</option>  
                              <option value="3">30</option> 
                             </select>
                             </div>
+                           </div> 
+                           <div class="row sp2" style="display:none;">
+                            <div class="col-md-6"><p class="txt-sp">Spouse</p> </div>
+                             <div class="col-md-6">
+                            <select class="form-control " placeholder="YOUR GENDER">
+                             
+                             <option value="1">20</option>
+                             <option value="2">25</option>  
+                             <option value="3">30</option> 
+                            </select>
+                            </div>
+                            </div>
+                            <div class="row bro2" style="display:none;">
+                            <div class="col-md-6"><p class="txt-bro">Brother</p> </div>
+                             <div class="col-md-6">
+                            <select class="form-control " placeholder="YOUR GENDER">
+                             
+                             <option value="1">20</option>
+                             <option value="2">25</option>  
+                             <option value="3">30</option> 
+                            </select>
+                            </div>
+                            </div>
+                            <div class="row sis2" style="display:none;">
+                            <div class="col-md-6"><p class="txt-sis">Sister</p> </div>
+                             <div class="col-md-6">
+                            <select class="form-control " placeholder="YOUR GENDER">
+                             
+                             <option value="1">20</option>
+                             <option value="2">25</option>  
+                             <option value="3">30</option> 
+                            </select>
+                            </div>
+                            </div>
+                            <div class="row fa2" style="display:none;">
+                            <div class="col-md-6"><p class="txt-fa">Father</p> </div>
+                             <div class="col-md-6">
+                            <select class="form-control " placeholder="YOUR GENDER">
+                             
+                             <option value="1">20</option>
+                             <option value="2">25</option>  
+                             <option value="3">30</option> 
+                            </select>
+                            </div>
+                            </div>
+                            <div class="row so2" style="display:none;">
+                            <div class="col-md-6"><p class="txt-so">Son</p> </div>
+                             <div class="col-md-6">
+                            <select class="form-control " placeholder="YOUR GENDER">
+                             
+                             <option value="1">20</option>
+                             <option value="2">25</option>  
+                             <option value="3">30</option> 
+                            </select>
+                            </div>
+                            </div>
+                            <div class="row da2" style="display:none;">
+                            <div class="col-md-6"><p class="txt-da">Daughter</p> </div>
+                             <div class="col-md-6">
+                            <select class="form-control " placeholder="YOUR GENDER">                             
+                             <option value="1">20</option>
+                             <option value="2">25</option>  
+                             <option value="3">30</option> 
+                            </select>
+                            </div>
+                            </div>
                         </div>
-                        
+                        <div class="row">
                             <center><button type="button" class="btn btn-default btn-back">BACK</button>
                             <button type="button" class="btn btn-primary btn-done">DONE</button></center>
-                       
+                       </div>
                     </div>
                 </div>
             </div>
@@ -139,6 +206,26 @@
     $(".insure").click(function(){
       $("#myModal").modal('show');
     });
+    $(".sp1").click(function(){
+      $(".sp2").fadeIn();
+     
+    });
+    $(".bro1").click(function(){
+      $(".bro2").fadeIn();
+     
+    });
+    $(".sis1").click(function(){
+      $(".sis2").fadeIn();
+     
+    });
+    $(".fa1").click(function(){
+      $(".fa2").fadeIn();
+     
+    });
+    $(".da1").click(function(){
+      $(".da2").fadeIn();
+     
+    });
     $(".btn-cont").click(function(){
       $("#myModal1").modal('show');
       $("#myModal").modal('hide');
@@ -146,6 +233,9 @@
     $(".btn-back").click(function(){
       $("#myModal").modal('show');
       $("#myModal1").modal('hide');
+    });
+    $(".btn-done").click(function(){
+     alert($(".txt-you").text() +" , "+$(".txt-sp").text());     
     });
   });
 </script>
